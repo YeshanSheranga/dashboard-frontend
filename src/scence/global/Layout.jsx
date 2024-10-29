@@ -3,16 +3,18 @@ import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 import { toggleSideContext } from "../../context/context";
 import ComponentRoutes from "../../routes/index";
-import { makeStyles } from "@mui/material";
 import { useMode } from "../../theme";
+import { createTheme } from "@mui/material";
 
 const Layout = () => {
-  const[themes] = useMode();
+  const [themes] = useMode();
   const { toggleSideBar } = useContext(toggleSideContext);
   console.log("toggleSideBarLyt - ", toggleSideBar);
-  const useStyles = makeStyles((themes) => ({}));
+
   return (
-    <main className={toggleSideBar ? "content-left-toggle" : "content"}>
+    <main
+      className={toggleSideBar ? "content-left-toggle" : "content"}
+    >
       <div className="left-grid">
         <Sidebar />
       </div>

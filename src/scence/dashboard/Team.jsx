@@ -1,8 +1,9 @@
 import React from 'react'
+import Subheader from '../global/Subheader'
 
 const Team = () => {
   return (
-    <div>Team</div>
+    <Subheader title="Team" subtitle="Welcome to the Team"/>
   )
 }
 

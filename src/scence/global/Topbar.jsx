@@ -1,4 +1,10 @@
-import { Box, IconButton, InputBase, useTheme } from "@mui/material";
+import {
+  Box,
+  createTheme,
+  IconButton,
+  InputBase,
+  useTheme,
+} from "@mui/material";
 import React, { useContext } from "react";
 import { ColorModeContext, tokens, useMode } from "../../theme";
 import SearchIcon from "@mui/icons-material/Search";
@@ -7,7 +13,6 @@ import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import Person3OutlinedIcon from "@mui/icons-material/Person3Outlined";
-import { useStyles } from "../../Breakpoints";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -15,7 +20,19 @@ const Topbar = () => {
   console.log("Topbarthems", themes);
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
-  const classes = useStyles();
+
+  //breakpoints
+  const Points = createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
+      },
+    },
+  });
 
   return (
     <Box
@@ -37,11 +54,38 @@ const Topbar = () => {
         borderRadius={7}
         sx={{
           ml: 3,
+          [Points.breakpoints.up("xs")]: {
+            border: "2px solid red",
+            width: 200,
+            height: 50,
+          },
+          [Points.breakpoints.up("sm")]: {
+            border: "2px solid green",
+            width: 230,
+            height: 50,
+          },
+          [Points.breakpoints.up("md")]: {
+            border: "2px solid yellow",
+            width: 250,
+            height: 50,
+          },
+          [Points.breakpoints.up("lg")]: {
+            border: "2px solid blue",
+            width: 270,
+            height: 50,
+          },
+          [Points.breakpoints.up("xl")]: {
+            border: "2px solid purple",
+            width: 320,
+            height: 50
+          },
         }}
-        className={classes.searchBox}
       >
         <Box width={290}>
-          <InputBase sx={{ width: "100%", m: 2 }} placeholder="Search" />
+          <InputBase
+            sx={{ width: "100%", m: 2, border: "2px dotted green" }}
+            placeholder="Search"
+          />
         </Box>
         <Box>
           <IconButton>

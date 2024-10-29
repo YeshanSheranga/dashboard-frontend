@@ -1,9 +1,10 @@
 import React from 'react'
+import Subheader from '../global/Subheader';
 
 const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
+  return(
+    <Subheader title="Dashboard" subtitle="Welcome to the Dashboard" />
+  ) 
 }
 
 export default Dashboard

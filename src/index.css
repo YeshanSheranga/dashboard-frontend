@@ -57,3 +57,52 @@ body,
 ::-webkit-scrollbar-track {
   background-color: rgb(194, 191, 191);
 }
+
+@media screen and(max-width:600px) {
+  .handle-responsive {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;  */
+    /* border: 1px solid red; */
+  }
+}
+
+@media screen and(max-width:900px) {
+  .handle-responsive {
+    /*display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* border: 1px solid red; */
+  }
+}
+
+@media screen and(max-width:1200px) {
+  .handle-responsive {
+    /*display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* border: 1px solid red; */
+  }
+}
+
+@media screen and(max-width:1536px) {
+  .handle-responsive {
+    /*display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* border: 1px solid red; */
+  }
+}
+
+@media (max-width: 600px) {
+  .content,
+  .content-left-toggle {
+    grid-template-columns: 50px 1210px; /* Hide sidebar by making the layout a single column */
+  }
+
+  .left-grid {
+    /*display: none;  Hide the sidebar */
+  }
+  .responsvie-design {
+    display: none;
+  }
+  .content{
+    width: 500px;
+  }
+}

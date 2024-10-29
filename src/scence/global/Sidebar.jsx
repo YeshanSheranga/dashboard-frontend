@@ -13,9 +13,10 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import TerrainOutlinedIcon from "@mui/icons-material/TerrainOutlined";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { toggleSideContext } from "../../context/context";
 import { Link } from "react-router-dom";
+//import profileImage from "../../assets/profile_image.jpg";
 
 const Sidebar = () => {
   const { toggleSideBar, setToggleSideBar } = useContext(toggleSideContext);
@@ -90,6 +91,7 @@ const Sidebar = () => {
             variant="h4"
             component="h4"
             sx={{ display: toggleSideBar ? "none" : "visible" }}
+            className="responsvie-design"
           >
             ADMIN
           </Typography>
@@ -139,6 +141,7 @@ const Sidebar = () => {
             variant="h5"
             component="h5"
             sx={{ display: toggleSideBar ? "none" : "visible" }}
+            className="responsvie-design"
           >
             IDP Yeshan
           </Typography>
@@ -154,6 +157,7 @@ const Sidebar = () => {
             variant="h6"
             component="h6"
             sx={{ display: toggleSideBar ? "none" : "visible" }}
+            className="responsvie-design"
           >
             Research Admin
           </Typography>
@@ -188,6 +192,7 @@ const Sidebar = () => {
                 variant="h5"
                 component="h5"
                 sx={{ display: toggleSideBar ? "none" : "visible" }}
+                className="responsvie-design"
               >
                 <Link href={props.url}>{props.name}</Link>
               </Typography>
