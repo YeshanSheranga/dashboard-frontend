@@ -41,14 +41,14 @@ const Topbar = () => {
       alignItems="center"
       height={80}
       // p={2}
-      // border="1px solid green"
+      border="3px dotted red"
     >
       <Box
         display="flex"
         justifyContent="space-around"
         alignItems="center"
         backgroundColor={colors.primary[400]}
-        // sx={{ border: "1px solid red" }}
+        //sx={{ border: "1px solid red" }}
         width={350}
         height={60}
         borderRadius={7}
@@ -77,7 +77,7 @@ const Topbar = () => {
           [Points.breakpoints.up("xl")]: {
             border: "2px solid purple",
             width: 320,
-            height: 50
+            height: 50,
           },
         }}
       >

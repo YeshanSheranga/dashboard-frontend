@@ -4,7 +4,7 @@ import Topbar from "./Topbar";
 import { toggleSideContext } from "../../context/context";
 import ComponentRoutes from "../../routes/index";
 import { useMode } from "../../theme";
-import { createTheme } from "@mui/material";
+import { Box, createTheme, Grid, Typography } from "@mui/material";
 
 const Layout = () => {
   const [themes] = useMode();
@@ -12,9 +12,7 @@ const Layout = () => {
   console.log("toggleSideBarLyt - ", toggleSideBar);
 
   return (
-    <main
-      className={toggleSideBar ? "content-left-toggle" : "content"}
-    >
+    <main className={toggleSideBar ? "content-left-toggle" : "content"}>
       <div className="left-grid">
         <Sidebar />
       </div>
@@ -27,6 +25,19 @@ const Layout = () => {
         </div>
       </div>
     </main>
+
+    // <Grid container spacing={4} columns={16} sx={{padding:"45px"}}>
+    //   <Grid size={{xs:16}} sx={{ border: "1px solid green" }}>
+    //     <Grid item>
+    //       <Sidebar />
+    //     </Grid>
+    //   </Grid>
+    //   <Grid size={{xs:16}} sx={{ border: "1px solid red" }}>
+    //     <Grid item>
+    //       <Topbar />
+    //     </Grid>
+    //   </Grid>
+    // </Grid>
   );
 };
 

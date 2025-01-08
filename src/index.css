@@ -29,6 +29,7 @@ body,
 }
 .left-grid {
   border: 1px solid green;
+  background-color: red;
 }
 .right-grid {
   width: 100%;
@@ -91,18 +92,19 @@ body,
 }
 
 @media (max-width: 600px) {
-  .content,
-  .content-left-toggle {
-    grid-template-columns: 50px 1210px; /* Hide sidebar by making the layout a single column */
+  .content {
+    display: grid;
+    grid-template-columns: 50px 300px;
   }
 
-  .left-grid {
-    /*display: none;  Hide the sidebar */
-  }
-  .responsvie-design {
-    display: none;
-  }
-  .content{
-    width: 500px;
+  .content-left-toggle {
+  display: grid;
+  grid-template-columns: 50px 350px;
+  gap: 8px;
+  /* border: 1px solid red; */
+}
+
+  .right-grid {
+    width: 100%;
   }
 }

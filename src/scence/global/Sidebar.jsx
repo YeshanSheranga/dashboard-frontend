@@ -91,7 +91,7 @@ const Sidebar = () => {
             variant="h4"
             component="h4"
             sx={{ display: toggleSideBar ? "none" : "visible" }}
-            className="responsvie-design"
+            // className="responsvie-design"
           >
             ADMIN
           </Typography>
@@ -141,7 +141,7 @@ const Sidebar = () => {
             variant="h5"
             component="h5"
             sx={{ display: toggleSideBar ? "none" : "visible" }}
-            className="responsvie-design"
+            // className="responsvie-design"
           >
             IDP Yeshan
           </Typography>
@@ -157,7 +157,7 @@ const Sidebar = () => {
             variant="h6"
             component="h6"
             sx={{ display: toggleSideBar ? "none" : "visible" }}
-            className="responsvie-design"
+            // className="responsvie-design"
           >
             Research Admin
           </Typography>
@@ -192,7 +192,7 @@ const Sidebar = () => {
                 variant="h5"
                 component="h5"
                 sx={{ display: toggleSideBar ? "none" : "visible" }}
-                className="responsvie-design"
+                // className="responsvie-design"
               >
                 <Link href={props.url}>{props.name}</Link>
               </Typography>
